@@ -7,7 +7,7 @@ useSeoMeta({
   title: "TESTING | Review Text"
 })
 const config = useRuntimeConfig()
-const { data: { value } } = await useFetch(`${config.public.baseUrl}/reviews/review-text`, { lazy: true, server: true, mode: 'no-cors' })
+const { data: { value } } = await useFetch(`${config.public.baseUrl}/reviews/review-text`, { lazy: false, server: true })
 const datas = value.data
 
 </script>

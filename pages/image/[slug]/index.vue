@@ -11,7 +11,7 @@ const config = useRuntimeConfig()
 const route = useRoute()
 const { slug } = route.params
 
-const { data: { value } } = await useFetch(`${config.public.baseUrl}/reviews/review-image/${slug}`, { lazy: true, server: true, mode: 'no-cors' })
+const { data: { value } } = await useFetch(`${config.public.baseUrl}/reviews/review-image/${slug}`, { lazy: false, server: true })
 const datas = value.data
 const mediaInfo = getSettingMediaResolution(slug)
 </script>
